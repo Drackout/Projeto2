@@ -103,9 +103,12 @@ namespace CraftingSim.Model
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
+                    //separate values by , 
+                    string[] removeComma = line.Split(", ");
                     //mat = (IMaterial)new Dictionary<IMaterial, int>();
+
                     // material (dunno how to convert to IMaterial), quantity
-                    // AddMaterial(line[1], line[2]);
+                    //AddMaterial(removeComma[1], removeComma[2]);
                 }
             }
         }

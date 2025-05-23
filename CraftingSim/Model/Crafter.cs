@@ -42,9 +42,9 @@ namespace CraftingSim.Model
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        
+                        string[] removeComma = line.Split(", ");
                         //recipeList.Add(new IRecipe(line))
-                        //recipeList[line[0]] = line[1];
+                        //recipeList[removeComma[0]] = removeComma[1];
                     }
                 }
             }
