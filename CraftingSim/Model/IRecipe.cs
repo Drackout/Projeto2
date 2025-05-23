@@ -18,4 +18,11 @@ namespace CraftingSim.Model
         //Probability of success when trying to craft an item from this recipe
         double SuccessRate { get; }
     }
+
+    public int CompareTo(IRecipe other)
+    {
+        if (other == null) return 1;
+
+        return Name.CompareTo(other.Name);
+    }
 }

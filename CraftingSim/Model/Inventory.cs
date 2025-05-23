@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Data.Common;
+using System.IO;
+
 
 namespace CraftingSim.Model
 {
@@ -91,7 +94,20 @@ namespace CraftingSim.Model
         public void LoadMaterialsFromFile(string file)
         {
             //TODO Implement Me
-            
+
+            //IMaterial mat = null;
+            //mat = (IMaterial) ;
+            using (StreamReader sr = new StreamReader("materials.txt"))
+            {
+                //int i = 0;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    //mat = (IMaterial)new Dictionary<IMaterial, int>();
+                    // material (dunno how to convert to IMaterial), quantity
+                    // AddMaterial(line[1], line[2]);
+                }
+            }
         }
     }
 }

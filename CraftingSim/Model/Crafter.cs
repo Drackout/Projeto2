@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 
 namespace CraftingSim.Model
@@ -32,6 +33,23 @@ namespace CraftingSim.Model
         public void LoadRecipesFromFile(string[] recipeFiles)
         {
             //TODO Implement Me
+            foreach (string filePath in recipeFiles)
+            {
+                using (StreamReader sr = new StreamReader(filePath))
+                {
+                    //line[0] Name
+                    //line[1] success rate
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        
+                        //recipeList.Add(new IRecipe(line))
+                        //recipeList[line[0]] = line[1];
+                    }
+                }
+            }
+
+            
         }
 
         /// <summary>
