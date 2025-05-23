@@ -38,7 +38,8 @@ namespace CraftingSim.Model
         /// <param name="quantity">The new amount to set</param>
         public void AddMaterial(IMaterial material, int quantity)
         {
-            //TODO Implement Me
+            //TODO Implement Me <----- ADD if not existing and Replace if same key
+            materials[material] = quantity;
         }
 
         /// <summary>
@@ -50,7 +51,12 @@ namespace CraftingSim.Model
         /// <returns>True if removed successfuly, false if not enough material</returns>
         public bool RemoveMaterial(IMaterial material, int quantity)
         {
-            // TODO Implement Me
+            // TODO Implement Me <----- Check if quantity to be removed is > or = if yes removes and return True
+            if (GetQuantity(material) >= quantity)
+            {
+                materials[material] = GetQuantity(material)-quantity;
+                return true;
+            }
             return false;
         }
 
@@ -85,6 +91,7 @@ namespace CraftingSim.Model
         public void LoadMaterialsFromFile(string file)
         {
             //TODO Implement Me
+            
         }
     }
 }

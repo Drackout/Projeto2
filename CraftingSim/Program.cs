@@ -2,7 +2,7 @@
 using CraftingSim.Controller;
 using CraftingSim.Model;
 using CraftingSim.View;
-
+using System.Collections.Generic;
 
 namespace CraftingSim {
     public class Program {
@@ -33,7 +33,6 @@ namespace CraftingSim {
             CraftingController controller = new CraftingController(
                 inventory, crafter, view);
             controller.Run();
-
         }
     }
 }
