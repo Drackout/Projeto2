@@ -17,12 +17,14 @@ namespace CraftingSim.Model
         IReadOnlyDictionary<IMaterial, int> RequiredMaterials { get; }
         //Probability of success when trying to craft an item from this recipe
         double SuccessRate { get; }
+
+        public int CompareTo(IRecipe other)
+        {
+            if (other == null) return 1;
+
+            return Name.CompareTo(other.Name);
+        }
     }
 
-    public int CompareTo(IRecipe other)
-    {
-        if (other == null) return 1;
-
-        return Name.CompareTo(other.Name);
-    }
+    
 }
